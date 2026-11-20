@@ -41,3 +41,17 @@ details p { color: var(--muted); padding-bottom: 6px; }
 .links .card span { display: block; color: var(--muted); font-size: 15px; }
 .path { white-space: nowrap; }
 footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.button-muted { background: var(--soft); color: var(--fg); }
+.store-cta { margin: 20px 0 24px; }
+.shot { margin: 0 0 8px; border: 1px dashed var(--line); border-radius: 12px; background: var(--surface);
+        aspect-ratio: 4 / 3; display: grid; place-items: center; color: var(--muted); font-size: 15px; }
+.shot img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.facts { width: 100%; border-collapse: collapse; font-size: 16px; }
+.facts th, .facts td { text-align: left; vertical-align: top; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.facts th { font-weight: 600; width: 38%; padding-right: 16px; }
+.assets { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.assets .pending { color: var(--muted); }
+blockquote { margin: 0 0 12px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+blockquote p:last-child { margin-bottom: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 420px) { nav { gap: 14px; } }

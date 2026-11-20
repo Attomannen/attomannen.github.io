@@ -8,9 +8,9 @@
 </head>
 <body>
 <main>
-  <nav><a class="home" href="../">SlatePaint</a><a href="./" aria-current="page">Support</a><a href="../privacy/">Privacy</a></nav>
+  <nav aria-label="Site"><a class="home" href="../">SlatePaint</a><a href="../guide/">Guide</a><a href="./" aria-current="page">Support</a><a href="../press/">Press</a><a href="../privacy/">Privacy</a></nav>
   <h1>Support</h1>
-  <p class="intro">Something not working, or a question? Check the answers below, or write to me.</p>
+  <p class="intro">Answers to common questions, and how to reach me.</p>
 
   <div class="card">
     <a class="button" href="mailto:antonemanuel.broman@gmail.com?subject=SlatePaint%20support">Email support</a>
@@ -19,34 +19,86 @@
     <ul class="checklist">
       <li>your iPad model and iPadOS version</li>
       <li>what you did and what happened</li>
-      <li>a screenshot, or the project (File › Open, hold the project, Export to Files)</li>
+      <li>a screenshot, or the project (File › Open, the project's menu, Export to Files)</li>
     </ul>
   </div>
 
-  <h2>Common questions</h2>
+  <h2 id="purchase">The purchase</h2>
   <details>
-    <summary>Where are my projects?</summary>
-    <p>In the Files app, under <span class="path">On My iPad › SlatePaint › Projects</span>. Your work saves by itself every two minutes and when you leave the app.</p>
+    <summary>What's free, and what does the unlock add?</summary>
+    <p>Importing your own meshes, baking, painting, saving and exporting are free. Until you unlock exports, every exported texture carries a faint “Made with SlatePaint” pattern, so you can check your textures in your engine before you buy. Unlock exports is one in-app purchase. It removes the pattern from every later export and adds File › Export mesh. No subscription.</p>
   </details>
   <details>
-    <summary>What does the unlock include?</summary>
-    <p>Importing your own meshes, and exporting textures and meshes. Painting, baking and the sample props are free.</p>
+    <summary>How much is it?</summary>
+    <p>$9.99 for the first two weeks after launch (26 January 2027), then $19.99, or the matching price in your country's currency.</p>
+  </details>
+  <details>
+    <summary>Why is there a pattern on my exported textures?</summary>
+    <p>Exports carry a “Made with SlatePaint” pattern until you unlock exports. It's in every map (color, roughness, metallic, height, ambient occlusion and the normal map), laid out differently each time. After unlocking, <span class="path">File › Export again</span> repeats your last export without it.</p>
+  </details>
+  <details>
+    <summary>Where do I unlock?</summary>
+    <p>The lock in the top bar, the Export sheet's Unlock exports…, or <span class="path">More (…) › Settings › Purchase</span>.</p>
   </details>
   <details>
     <summary>I bought the unlock on another iPad</summary>
-    <p>Open <span class="path">Settings › Purchase › Restore purchases</span>, signed in with the same Apple Account.</p>
+    <p>Open <span class="path">More (…) › Settings › Purchase › Restore purchases</span>, signed in with the same Apple Account. A code you were given goes in Redeem a code, beside it.</p>
   </details>
   <details>
+    <summary>Does Family Sharing work?</summary>
+    <p>Yes. The unlock is shared with your Family Sharing group: family members get it on their own iPads, and Restore purchases brings it in if it doesn't show by itself.</p>
+  </details>
+
+  <h2 id="files">Files and projects</h2>
+  <details>
+    <summary>Which files can I bring in?</summary>
+    <p>Meshes: OBJ, FBX, glTF (.gltf and .glb), USD (.usd, .usda, .usdc, .usdz), PLY and STL, for the low poly you paint and the high poly you bake from. A mesh without UVs is unwrapped for you. Images: mesh maps baked in another app, material maps, fills, stencils, masks, HDR environments and brush tips. Brushes as .brush and .brushset files, color palettes as .swatches files.</p>
+  </details>
+  <details>
+    <summary>Which files can I export?</summary>
+    <p>Textures as PNG, TGA, JPEG, TIFF, EXR or DDS (BC1 to BC7), with presets for Unreal Engine (packed ORM), Unity (URP, and HDRP mask map), Godot, glTF (a .glb with the mesh, material and textures) and separate maps, or presets of your own with channel packing and file names. Normal maps in 8 or 16 bits, OpenGL or DirectX. A layered PSD per channel. With the unlock, the mesh itself.</p>
+  </details>
+  <details>
+    <summary>Where are my projects?</summary>
+    <p>In the Files app, under <span class="path">On My iPad › SlatePaint › Projects</span>, and in the app under File › Open. Each project is one file, and it carries its high poly with it (Bake › Keep in the project file, on by default).</p>
+  </details>
+  <details>
+    <summary>How do I move a project to another iPad or a Mac?</summary>
+    <p>In File › Open, open the project's menu and choose Export to Files, then save it to iCloud Drive or another place, or share it from the Files app with AirDrop. On the other iPad, tap the project file in Files or accept the AirDrop and choose SlatePaint: it's copied into your projects. File › Open › Import… does the same from inside the app.</p>
+  </details>
+  <details>
+    <summary>How do my textures get to my computer?</summary>
+    <p>Export asks for a folder in Files: pick one in iCloud Drive or on a connected drive, or a folder you then AirDrop. The next export goes to the same folder, and the Exported message offers Show in Files.</p>
+  </details>
+  <details>
+    <summary>Does SlatePaint save by itself? Where are the autosaves?</summary>
+    <p>Yes, every two minutes and when you leave the app. A named project saves into itself. An untitled project is kept as “Autosave”, shown above your projects in File › Open with Keep as a project…. Each autosave also keeps a copy: in File › Open, a project's menu › Open an autosave opens one as a project of its own. <span class="path">Settings › Saving</span> sets how many copies are kept per project; they're kept inside the app, not in the Files app, and <span class="path">Settings › Storage</span> shows the space they take.</p>
+  </details>
+  <details>
+    <summary>My iPad is running out of space</summary>
+    <p><span class="path">More (…) › Settings › Storage</span> shows what SlatePaint keeps. Clean up removes previous saves, autosave copies, leftovers of deleted projects and the high poly cache, never a project.</p>
+  </details>
+
+  <h2 id="using">Using SlatePaint</h2>
+  <details>
     <summary>Can I use maps baked in another app?</summary>
-    <p>Yes. File › Import mesh maps takes several at once and matches them by name, or import one at a time from its row in <span class="path">Texture Set › Mesh maps</span>.</p>
+    <p>Yes. File › Import mesh maps takes several at once and matches them by name, or import one into its place from <span class="path">Texture set › Mesh maps</span>. A DirectX normal map can be flipped there.</p>
   </details>
   <details>
     <summary>Where are the gestures and keyboard shortcuts?</summary>
-    <p>Help, the question mark at the top right, lists them all.</p>
+    <p>In <span class="path">More (…) › Help</span>: touch, Pencil and keys, with a search. The <a href="../guide/">user guide</a> covers the rest.</p>
+  </details>
+  <details>
+    <summary>Does it work without an Apple Pencil?</summary>
+    <p>Yes. Turn on <span class="path">Settings › Pencil and touch › Paint with a finger</span>. The Pencil adds pressure, tilt and, on Apple Pencil Pro, barrel roll, the squeeze for the quick menu and taps you feel in your hand.</p>
+  </details>
+  <details>
+    <summary>Does SlatePaint need an account or the internet?</summary>
+    <p>No. There's no sign-in, and nothing is sent anywhere; the App Store handles the purchase. See the <a href="../privacy/">privacy policy</a>.</p>
   </details>
 
-  <h2>Requirements</h2>
-  <p>An iPad with the A14 chip or later, on iPadOS 17 or later: iPad Air (4th generation) and later, iPad (10th generation) and later, iPad mini (6th generation) and later, or any iPad with an M-series chip.</p>
+  <h2 id="requirements">Requirements</h2>
+  <p>An iPad with the A14 chip or later, on iPadOS 26 or later: iPad Air (4th generation) and later, iPad (10th generation) and later, iPad mini (6th generation) and later, or any iPad with an M-series chip. An M1 or later is recommended. On iPads with 4 GB of memory the largest texture size is 2K. SlatePaint is for iPad only; it isn't offered on Mac or Apple Vision Pro.</p>
 </main>
 </body>
 </html>

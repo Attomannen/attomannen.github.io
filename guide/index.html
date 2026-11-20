@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SlatePaint User Guide</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+  <nav aria-label="Site"><a class="home" href="../">SlatePaint</a><a href="./" aria-current="page">Guide</a><a href="../support/">Support</a><a href="../press/">Press</a><a href="../privacy/">Privacy</a></nav>
+  <h1>User guide</h1>
+  <p class="intro">The usual order: import a mesh, bake its mesh maps, add a smart material, paint, export. Gestures and keys are in the app too, under More (…) › Help at the top right.</p>
+
+  <h2 id="first-launch">The first launch</h2>
+  <p>SlatePaint opens on a sample prop with its high poly ready but not yet baked. The Getting started pill at the top of the view shows how far you are and the next step (bake, add a material, paint, export); tap it to open the checklist. Help brings it back. File › New project starts from your own mesh, a sphere, or one of the sample props, which open already baked and textured.</p>
+
+  <h2 id="getting-around">Getting around</h2>
+  <p>The top bar has two tabs in the middle: Paint, where you paint and build layers, and Bake, where you bake the mesh maps. The File menu sits under the project's name at the top left; Settings and Help are in More (…) at the top right, with anything the bar has no room for.</p>
+  <p>The Apple Pencil paints; your fingers move the view. One finger orbits around the model and a double-tap frames it. Two fingers pan, pinch to zoom and twist to turn. A two-finger tap undoes and a three-finger tap redoes; hold two fingers down while painting to slide through the history. Three fingers up or down change the brush size; sideways they turn the light round the model. A four-finger tap hides everything but the model, and the Show panels button brings it back.</p>
+  <p>The menu at the top right of the view chooses what it shows: the material, one channel, a mesh map or a check, and under Overlays the wireframe and UV seams. Display settings, the sun in the top bar, has the lighting, background, tone mapping, height displacement and the camera. Tap an axis at the bottom left to look along it; tap Persp under them for an orthographic view.</p>
+
+  <h2 id="quick-menu">The quick menu</h2>
+  <p>Squeeze an Apple Pencil Pro, or double-tap the Pencil where the iPad's Apple Pencil setting shows the palette, for the quick menu where the Pencil is. It has eight slots (tools, new layers, quick mask, undo and redo by default; hold a slot to change it), each kind of tool keeping its own set. Two sliders round it follow what's selected, such as the brush's size and flow. Tap its middle for a color wheel. On Apple Pencil Pro you feel it open and its slots pass under the Pencil; Settings › Pencil and touch turns the taps off.</p>
+
+  <h2 id="layers">Layers decide what you paint</h2>
+  <p>Each layer chooses which channels it affects (color, height, roughness, metallic and any you add) and how each blends. A stroke paints the channels that are on in both the layer and the brush's material.</p>
+  <p>A fill layer applies one material everywhere. Paint on it and it gets a black mask, so your strokes reveal it. Hold a layer for its options: solo, show the mask alone, masks, rename, duplicate, merge down, delete. Hold it and move to drag it into another place or a folder. Tap an effect's row to see its settings in Properties.</p>
+
+  <h2 id="brushes">Brushes</h2>
+  <p>Properties shows the brush with a sample stroke, its presets, size, flow and color. The Brush studio holds the rest: the tip, material, stroke, dynamics, pressure and projection, with a pad to try it on. Hold the Pencil still at the end of a stroke to turn it into a clean line, circle, rectangle or polygon.</p>
+
+  <h2 id="masks">Masks and generators</h2>
+  <p>A mask decides where a layer shows. Its effects stack from the bottom up: paint, fills, levels, blur, filters and the rest. Generators read the mesh maps (edges, cavities, dirt, ambient occlusion), so bake first. Level sets how much of the model they cover; Auto level, on the generator's row, finds a level that suits this model.</p>
+
+  <h2 id="smart-materials">Smart materials and the Shelf</h2>
+  <p>A smart material is a folder of fill layers (worn paint, rust, dirt, dust) whose masks come from generators. Drag one from the Shelf onto the model or the layer stack. The folder's Wear and Scale tune it as a whole. The Shelf also holds scanned materials, smart masks, grunges and your favorites; Whole shelf opens all of it in a larger sheet.</p>
+
+  <h2 id="baking">Baking</h2>
+  <p>The Bake tab bakes the mesh maps: normal, world space normal, ambient occlusion, curvature, thickness, position, height and ID. Choose a high poly to bake its detail onto your low poly, or bake the low poly from itself. The cage is automatic by default. If something went wrong, the result under the bakers says what, with a button that changes the setting; then press Bake again. Maps baked in another app come in through File › Import mesh maps.</p>
+
+  <h2 id="export">Export</h2>
+  <p>Export, at the end of the top bar, packs textures for Unreal Engine, Unity (URP or HDRP), Godot or glTF (a .glb with the mesh), or your own presets. Edit and hide presets shows and hides any of them, the packed C / M / N / FX preset included. File › Export again repeats the last export. Until you unlock exports, exported textures carry a faint “Made with SlatePaint” pattern.</p>
+
+  <h2 id="projects">Projects</h2>
+  <p>File › Open shows your projects with a picture of each, newest first or by name. Each card's menu renames, duplicates, exports, deletes or opens an autosave. Your work saves by itself every two minutes and when you leave the app. A project keeps its high poly inside it unless you turn off Bake › Keep in the project file. File › Resolution changes the size of every texture set; Texture set › Size changes one, and the mesh's unit is beside it.</p>
+
+  <h2 id="settings">Settings</h2>
+  <p>Settings, in More (…), holds the app's own preferences: the look of the panels (glass or solid, square or rounded corners), Pencil and touch, how many autosave copies to keep, storage, language and the purchase. Advanced shows frame stats under the view. The panels move by dragging the grip at their top, or by holding it; a double-tap on their inner edge sets their width back.</p>
+</main>
+</body>
+</html>
