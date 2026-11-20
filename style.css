@@ -55,3 +55,24 @@ blockquote { margin: 0 0 12px; padding: 14px 18px; background: var(--surface); b
 blockquote p:last-child { margin-bottom: 0; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 420px) { nav { gap: 14px; } }
+/* The personal landing page: wider, with tiles for apps and projects and a gallery for art. */
+.home-page main { max-width: 960px; }
+.hero { padding-block: 12px 8px; }
+.hero h1 { font-size: 44px; }
+section { scroll-margin-top: 24px; }
+.section-intro { color: var(--muted); }
+.tiles { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.tile { display: grid; grid-template-rows: auto 1fr; background: var(--surface); border: 1px solid var(--line);
+        border-radius: 12px; overflow: hidden; color: var(--fg); text-decoration: none; }
+a.tile:hover { border-color: var(--accent); }
+.tile-image { display: block; aspect-ratio: 16 / 10; width: 100%; object-fit: cover; }
+.tile-body { display: grid; gap: 6px; padding: 16px 18px 18px; align-content: start; }
+.tile-body > span { color: var(--muted); font-size: 15px; }
+.tile-body .tile-meta { font-size: 13px; }
+.tile-placeholder { background: var(--soft); color: var(--muted); display: grid; place-items: center; font-size: 15px; }
+.gallery { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.gallery figure { margin: 0; border-radius: 10px; overflow: hidden; position: relative; aspect-ratio: 4 / 3; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery figcaption { position: absolute; inset: auto 0 0 0; padding: 8px 12px; font-size: 14px; color: var(--fg);
+                      background: color-mix(in srgb, var(--surface) 85%, transparent); }
+@media (max-width: 520px) { .hero h1 { font-size: 34px; } }
